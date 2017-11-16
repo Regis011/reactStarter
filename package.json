@@ -1,0 +1,34 @@
+{
+  "name": "react-starter",
+  "version": "1.1.0",
+  "private": true,
+  "author": "Vladimir Rancic",
+  "version": "1.0.0",
+  "description": "React starter with bootstrap 4 and sass ready.",
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "bootstrap": "^4.0.0-beta.2",
+    "chokidar-cli": "^1.2.0",
+    "install": "^0.10.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm": "^5.5.1",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^4.1.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17",
+    "reactstrap": "^5.0.0-alpha.4"
+  },
+  "scripts": {
+    "build-css:scss-compile": "node-sass-chokidar --source-map true src/sass/ -o src/",
+    "build-css:autoprefixer": "postcss src/*.css --use autoprefixer -d src/",
+    "watch-css": "npm-run-all -p build-css:*",
+    "sass:watch": "chokidar 'src/sass/*.scss' -c 'npm run watch-css'",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p sass:watch start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
