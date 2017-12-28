@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": "Vladimir Rancic",
   "description": "React starter with bootstrap 4 and sass ready.",
