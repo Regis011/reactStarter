@@ -10,9 +10,13 @@ import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
+  // Remove tag <App /> and uncomment this
   // <BrowserRouter>
-  //   <Route path="" component={} />
-  //   <Route path="" component={} />
+  // <div>
+  //     <Route path="/" component={App} />
+  //     <Route path="/hello" component={} />
+  //     <Route path="/god" component={} />
+  //   </div>
   // </BrowserRouter>,
   <App />, document.getElementById('root')
 );
